@@ -37,6 +37,32 @@ class IntentHandler: INExtension {
 
 extension IntentHandler : INCreateTaskListIntentHandling {
     
+    func resolveTitle(for intent: INCreateTaskListIntent, with completion: @escaping (INSpeakableStringResolutionResult) -> Void) {
+        let result: INSpeakableStringResolutionResult
+        
+        let months = DateFormatter().monthSymbols ?? []
+        
+        if let title = intent.title, !title.spokenPhrase.isEmpty {
+            let titleContainsMonth: Bool
+            
+            if let monthComponent = title.spokenPhrase.components(separatedBy: " ").first {
+                titleContainsMonth = months.contains(monthComponent)
+            } else {
+                titleContainsMonth = false
+            }
+            
+            if titleContainsMonth {
+                result = INSpeakableStringResolutionResult.success(with: title)
+            } else {
+                result = INSpeakableStringResolutionResult.needsValue()
+            }
+        } else {
+            result = INSpeakableStringResolutionResult.needsValue()
+        }
+        
+        completion(result)
+    }
+    
     public func handle(intent: INCreateTaskListIntent,
                        completion: @escaping (INCreateTaskListIntentResponse) -> Swift.Void) {
         
