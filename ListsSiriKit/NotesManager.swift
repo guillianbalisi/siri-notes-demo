@@ -16,10 +16,19 @@ class NotesManager {
     static let shared = NotesManager()
     let sharedDefaults = UserDefaults(suiteName: NotesManager.GroupId)
     
+    var notes: [String] {
+        return savedNotes
+    }
+    
     init() {
-        if let saved = sharedDefaults?.value(forKey: NotesManager.NotesKey) {
-            savedLists = saved as! [String : [String]]
+        if let savedNotes = sharedDefaults?.value(forKey: NotesManager.NotesKey) as? [String] {
+            self.savedNotes = savedNotes
         }
+    }
+    
+    func createNote(_ note: String) {
+        savedNotes.append(note)
+        sharedDefaults?.set(savedNotes, forKey: NotesManager.NotesKey)
     }
     
     func lists() -> [String : [String]] {
@@ -59,6 +68,11 @@ class NotesManager {
     }
     
     // MARK: private
+    
+    private func updatedSavedNotes(newNote: String) {
+        savedNotes.append(newNote)
+        sharedDefaults?.set(savedNotes, forKey: NotesManager.NotesKey)
+    }
     
     private func updateSavedLists(changedList: [String]?, listName: String) {
         savedLists[listName] = changedList

@@ -32,7 +32,20 @@ class IntentHandler: INExtension {
         }
         return tasks
     }
-      
+}
+
+extension IntentHandler: INCreateNoteIntentHandling {
+    func handle(intent: INCreateNoteIntent, completion: @escaping (INCreateNoteIntentResponse) -> Void) {
+        let response: INCreateNoteIntentResponse
+        
+        if let title = intent.title, !title.spokenPhrase.isEmpty {
+            response = INCreateNoteIntentResponse(code: .success, userActivity: nil)
+        } else {
+            response = INCreateNoteIntentResponse(code: .failureRequiringAppLaunch, userActivity: nil)
+        }
+        
+        completion(response)
+    }
 }
 
 extension IntentHandler : INCreateTaskListIntentHandling {
