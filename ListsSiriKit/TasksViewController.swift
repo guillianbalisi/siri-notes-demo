@@ -18,7 +18,7 @@ class TasksViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = listName
-        tasks = ListsManager.sharedInstance.tasksForList(withName: listName!)
+        tasks = NotesManager.sharedInstance.tasksForList(withName: listName!)
     }
     
     // MARK: UITableViewDataSource
@@ -48,7 +48,7 @@ class TasksViewController: UIViewController, UITableViewDataSource {
                    forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let name = tasks[indexPath.row]
-            ListsManager.sharedInstance.finish(task: name)
+            NotesManager.sharedInstance.finish(task: name)
             self.reloadTasks()
         }
     }
@@ -71,7 +71,7 @@ class TasksViewController: UIViewController, UITableViewDataSource {
                             let textField = alertController.textFields![0]
                             if let text = textField.text {
                                 if text != "" {
-                                    ListsManager.sharedInstance.add(tasks: [text],
+                                    NotesManager.sharedInstance.add(tasks: [text],
                                                                     toList: self.listName!)
                                     self.reloadTasks()
                                 }
@@ -81,7 +81,7 @@ class TasksViewController: UIViewController, UITableViewDataSource {
     }
     
     private func reloadTasks() {
-        tasks = ListsManager.sharedInstance.tasksForList(withName: listName!)
+        tasks = NotesManager.sharedInstance.tasksForList(withName: listName!)
         self.tableView.reloadData()
     }
     

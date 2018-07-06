@@ -18,8 +18,8 @@
 		E8067DCB1EFE8EA40062D043 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8067DC91EFE8EA40062D043 /* MainInterface.storyboard */; };
 		E8067DCF1EFE8EA40062D043 /* SiriUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E8067DC21EFE8EA40062D043 /* SiriUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E8067DD21EFE8EA40062D043 /* Siri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E8067DB91EFE8EA30062D043 /* Siri.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E8067DDB1EFE9B270062D043 /* ListsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8067DDA1EFE9B270062D043 /* ListsManager.swift */; };
-		E8067DDC1EFE9B270062D043 /* ListsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8067DDA1EFE9B270062D043 /* ListsManager.swift */; };
+		E8067DDB1EFE9B270062D043 /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8067DDA1EFE9B270062D043 /* NotesManager.swift */; };
+		E8067DDC1EFE9B270062D043 /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8067DDA1EFE9B270062D043 /* NotesManager.swift */; };
 		E8067DE01EFEB8C00062D043 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8067DDF1EFEB8C00062D043 /* TasksViewController.swift */; };
 		E84249111EFEBD1F007B697E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84249101EFEBD1F007B697E /* Utils.swift */; };
 /* End PBXBuildFile section */
@@ -72,7 +72,7 @@
 		E8067DC71EFE8EA40062D043 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
 		E8067DCA1EFE8EA40062D043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		E8067DCC1EFE8EA40062D043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8067DDA1EFE9B270062D043 /* ListsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsManager.swift; sourceTree = "<group>"; };
+		E8067DDA1EFE9B270062D043 /* NotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManager.swift; sourceTree = "<group>"; };
 		E8067DDD1EFE9C100062D043 /* ListsSiriKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ListsSiriKit.entitlements; sourceTree = "<group>"; };
 		E8067DDE1EFE9C210062D043 /* Siri.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Siri.entitlements; sourceTree = "<group>"; };
 		E8067DDF1EFEB8C00062D043 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 				E8067DAA1EFE8DDB0062D043 /* Assets.xcassets */,
 				E8067DAC1EFE8DDB0062D043 /* LaunchScreen.storyboard */,
 				E8067DAF1EFE8DDB0062D043 /* Info.plist */,
-				E8067DDA1EFE9B270062D043 /* ListsManager.swift */,
+				E8067DDA1EFE9B270062D043 /* NotesManager.swift */,
 				E84249101EFEBD1F007B697E /* Utils.swift */,
 			);
 			path = ListsSiriKit;
@@ -316,7 +316,7 @@
 				E84249111EFEBD1F007B697E /* Utils.swift in Sources */,
 				E8067DA61EFE8DDB0062D043 /* ViewController.swift in Sources */,
 				E8067DE01EFEB8C00062D043 /* TasksViewController.swift in Sources */,
-				E8067DDB1EFE9B270062D043 /* ListsManager.swift in Sources */,
+				E8067DDB1EFE9B270062D043 /* NotesManager.swift in Sources */,
 				E8067DA41EFE8DDB0062D043 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,7 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8067DBC1EFE8EA30062D043 /* IntentHandler.swift in Sources */,
-				E8067DDC1EFE9B270062D043 /* ListsManager.swift in Sources */,
+				E8067DDC1EFE9B270062D043 /* NotesManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

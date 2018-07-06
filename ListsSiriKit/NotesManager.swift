@@ -1,5 +1,5 @@
 //
-//  ListsManager.swift
+//  NotesManager.swift
 //  ListsSiriKit
 //
 //  Created by Martin Mitrevski on 24.06.17.
@@ -8,15 +8,15 @@
 
 import Foundation
 
-class ListsManager {
+class NotesManager {
     private var savedLists: [String : [String]] = [String : [String]]()
     static let ListsKey = "lists"
     static let GroupId = "group.com.mitrevski.ListsSiriKit"
-    static let sharedInstance = ListsManager()
-    let sharedDefaults = UserDefaults(suiteName: ListsManager.GroupId)
+    static let sharedInstance = NotesManager()
+    let sharedDefaults = UserDefaults(suiteName: NotesManager.GroupId)
     
     init() {
-        if let saved = sharedDefaults?.value(forKey: ListsManager.ListsKey) {
+        if let saved = sharedDefaults?.value(forKey: NotesManager.ListsKey) {
             savedLists = saved as! [String : [String]]
         }
     }
@@ -61,7 +61,7 @@ class ListsManager {
     
     private func updateSavedLists(changedList: [String]?, listName: String) {
         savedLists[listName] = changedList
-        sharedDefaults?.set(savedLists, forKey: ListsManager.ListsKey)
+        sharedDefaults?.set(savedLists, forKey: NotesManager.ListsKey)
         sharedDefaults?.synchronize()
     }
     
