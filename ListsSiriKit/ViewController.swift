@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return NotesManager.sharedInstance.lists().count
+        return NotesManager.shared.lists().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
         }
         
-        let listName = Array(NotesManager.sharedInstance.lists().keys)[indexPath.row]
+        let listName = Array(NotesManager.shared.lists().keys)[indexPath.row]
         cell?.textLabel?.text = listName
         
         return cell!
@@ -45,8 +45,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                    commit editingStyle: UITableViewCellEditingStyle,
                    forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let listName = Array(NotesManager.sharedInstance.lists().keys)[indexPath.row]
-            NotesManager.sharedInstance.deleteList(name: listName)
+            let listName = Array(NotesManager.shared.lists().keys)[indexPath.row]
+            NotesManager.shared.deleteList(name: listName)
             self.tableView.reloadData()
         }
     }
@@ -71,7 +71,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showTasks" {
             let next = segue.destination as! TasksViewController
-            let listName = Array(NotesManager.sharedInstance.lists().keys)[selectedRow!.row]
+            let listName = Array(NotesManager.shared.lists().keys)[selectedRow!.row]
             next.listName = listName
             selectedRow = nil
         }
@@ -87,7 +87,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let textField = alertController.textFields![0]
             if let text = textField.text {
                 if text != "" {
-                    NotesManager.sharedInstance.createList(name: text)
+                    NotesManager.shared.createList(name: text)
                     self.tableView.reloadData()
                 }
             }

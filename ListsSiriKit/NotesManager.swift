@@ -10,9 +10,10 @@ import Foundation
 
 class NotesManager {
     private var savedLists: [String : [String]] = [String : [String]]()
+    private var savedNotes: [String] = []
     static let NotesKey = "notes"
     static let GroupId = "group.com.mitrevski.ListsSiriKit"
-    static let sharedInstance = NotesManager()
+    static let shared = NotesManager()
     let sharedDefaults = UserDefaults(suiteName: NotesManager.GroupId)
     
     init() {

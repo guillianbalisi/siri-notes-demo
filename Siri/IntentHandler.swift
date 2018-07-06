@@ -71,7 +71,7 @@ extension IntentHandler : INCreateTaskListIntentHandling {
             return
         }
         
-        NotesManager.sharedInstance.createList(name: title.spokenPhrase)
+        NotesManager.shared.createList(name: title.spokenPhrase)
         
         var tasks: [INTask] = []
         if let taskTitles = intent.taskTitles {
@@ -80,7 +80,7 @@ extension IntentHandler : INCreateTaskListIntentHandling {
                 return taskTitle.spokenPhrase
             }
             tasks = createTasks(fromTitles: taskTitlesStrings)
-            NotesManager.sharedInstance.add(tasks: taskTitlesStrings, toList: title.spokenPhrase)
+            NotesManager.shared.add(tasks: taskTitlesStrings, toList: title.spokenPhrase)
         }
         
         let response = INCreateTaskListIntentResponse(code: .success, userActivity: nil)
@@ -114,7 +114,7 @@ extension IntentHandler : INAddTasksIntentHandling {
                 return taskTitle.spokenPhrase
             }
             tasks = createTasks(fromTitles: taskTitlesStrings)
-            NotesManager.sharedInstance.add(tasks: taskTitlesStrings, toList: title.spokenPhrase)
+            NotesManager.shared.add(tasks: taskTitlesStrings, toList: title.spokenPhrase)
         }
         
         let response = INAddTasksIntentResponse(code: .success, userActivity: nil)
@@ -138,7 +138,7 @@ extension IntentHandler : INSetTaskAttributeIntentHandling {
         let status = intent.status
         
         if status == .completed {
-            NotesManager.sharedInstance.finish(task: title.spokenPhrase)
+            NotesManager.shared.finish(task: title.spokenPhrase)
         }
         let response = INSetTaskAttributeIntentResponse(code: .success, userActivity: nil)
         response.modifiedTask = intent.targetTask
