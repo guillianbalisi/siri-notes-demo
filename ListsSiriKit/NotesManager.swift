@@ -10,13 +10,13 @@ import Foundation
 
 class NotesManager {
     private var savedLists: [String : [String]] = [String : [String]]()
-    static let ListsKey = "lists"
+    static let NotesKey = "notes"
     static let GroupId = "group.com.mitrevski.ListsSiriKit"
     static let sharedInstance = NotesManager()
     let sharedDefaults = UserDefaults(suiteName: NotesManager.GroupId)
     
     init() {
-        if let saved = sharedDefaults?.value(forKey: NotesManager.ListsKey) {
+        if let saved = sharedDefaults?.value(forKey: NotesManager.NotesKey) {
             savedLists = saved as! [String : [String]]
         }
     }
@@ -61,7 +61,7 @@ class NotesManager {
     
     private func updateSavedLists(changedList: [String]?, listName: String) {
         savedLists[listName] = changedList
-        sharedDefaults?.set(savedLists, forKey: NotesManager.ListsKey)
+        sharedDefaults?.set(savedLists, forKey: NotesManager.NotesKey)
         sharedDefaults?.synchronize()
     }
     
