@@ -26,7 +26,7 @@ extension IntentHandler: INCreateNoteIntentHandling {
             return
         }
         
-        NotesManager.shared.createNote(title.spokenPhrase)
+        NotesManager.shared.createNote(title: title.spokenPhrase)
         
         let response = INCreateNoteIntentResponse(code: .success, userActivity: nil)
         response.createdNote = INNote(title: title, contents: [], groupName: nil, createdDateComponents: nil, modifiedDateComponents: nil, identifier: nil)

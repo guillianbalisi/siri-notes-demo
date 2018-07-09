@@ -18,32 +18,35 @@ struct Note: Codable {
         return formatter
     }()
     
-    init(title: String, date: Date) {
+    init(title: String) {
         self.title = title
-        self.date = Note.dateFormatter.string(from: date)
+        self.date = Note.dateFormatter.string(from: Date())
     }
 }
 
 class NotesManager {
-    private var savedNotes: [String] = []
+    private var savedNotes: [Note] = []
     static let NotesKey = "notes"
     static let GroupId = "group.com.gbalisi.ListsSiri"
     static let shared = NotesManager()
     
-    let sharedDefaults = UserDefaults(suiteName: NotesManager.GroupId)
-    
-    var notes: [String] {
+    private let sharedContainer = Disk.Directory.sharedContainer(appGroupName: NotesManager.GroupId)
+
+    var notes: [Note] {
         return savedNotes
     }
-    
+
     init() {
-        if let savedNotes = sharedDefaults?.value(forKey: NotesManager.NotesKey) as? [String] {
-            self.savedNotes = savedNotes
+        do {
+            savedNotes = try Disk.retrieve(NotesManager.NotesKey, from: sharedContainer, as: [Note].self)
+        } catch {
+            savedNotes = []
         }
     }
-    
-    func createNote(_ note: String) {
-        savedNotes.append(note)
-        sharedDefaults?.set(savedNotes, forKey: NotesManager.NotesKey)
+
+    func createNote(title: String) {
+        let newNote = Note(title: title)
+        savedNotes.append(newNote)
+        try? Disk.append(newNote, to: NotesManager.NotesKey, in: sharedContainer)
     }
 }

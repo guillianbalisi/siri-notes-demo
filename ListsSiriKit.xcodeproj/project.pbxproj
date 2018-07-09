@@ -18,9 +18,18 @@
 		E8067DD21EFE8EA40062D043 /* Siri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E8067DB91EFE8EA30062D043 /* Siri.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E8067DDB1EFE9B270062D043 /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8067DDA1EFE9B270062D043 /* NotesManager.swift */; };
 		E8067DDC1EFE9B270062D043 /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8067DDA1EFE9B270062D043 /* NotesManager.swift */; };
+		F1F8022720F3AF8000275418 /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4920F3AAB600D26CAB /* Disk.swift */; };
+		F1F8022820F3AF8000275418 /* Disk+[Data].swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4A20F3AAB600D26CAB /* Disk+[Data].swift */; };
+		F1F8022920F3AF8000275418 /* Disk+[UIImage].swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4720F3AAB600D26CAB /* Disk+[UIImage].swift */; };
+		F1F8022A20F3AF8000275418 /* Disk+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4D20F3AAB600D26CAB /* Disk+Codable.swift */; };
+		F1F8022B20F3AF8000275418 /* Disk+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4420F3AAB600D26CAB /* Disk+Data.swift */; };
+		F1F8022C20F3AF8000275418 /* Disk+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4B20F3AAB600D26CAB /* Disk+Errors.swift */; };
+		F1F8022D20F3AF8000275418 /* Disk+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4820F3AAB600D26CAB /* Disk+Helpers.swift */; };
+		F1F8022E20F3AF8000275418 /* Disk+InternalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4E20F3AAB600D26CAB /* Disk+InternalHelpers.swift */; };
+		F1F8022F20F3AF8000275418 /* Disk+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4C20F3AAB600D26CAB /* Disk+UIImage.swift */; };
+		F1F8023020F3AF8000275418 /* Disk+VolumeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4520F3AAB600D26CAB /* Disk+VolumeInformation.swift */; };
 		F1FDDF4F20F3AAB600D26CAB /* Disk+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4420F3AAB600D26CAB /* Disk+Data.swift */; };
 		F1FDDF5020F3AAB600D26CAB /* Disk+VolumeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4520F3AAB600D26CAB /* Disk+VolumeInformation.swift */; };
-		F1FDDF5120F3AAB600D26CAB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1FDDF4620F3AAB600D26CAB /* Info.plist */; };
 		F1FDDF5220F3AAB600D26CAB /* Disk+[UIImage].swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4720F3AAB600D26CAB /* Disk+[UIImage].swift */; };
 		F1FDDF5320F3AAB600D26CAB /* Disk+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4820F3AAB600D26CAB /* Disk+Helpers.swift */; };
 		F1FDDF5420F3AAB600D26CAB /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4920F3AAB600D26CAB /* Disk.swift */; };
@@ -80,10 +89,8 @@
 		E8067DDA1EFE9B270062D043 /* NotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManager.swift; sourceTree = "<group>"; };
 		E8067DDD1EFE9C100062D043 /* ListsSiriKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ListsSiriKit.entitlements; sourceTree = "<group>"; };
 		E8067DDE1EFE9C210062D043 /* Siri.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Siri.entitlements; sourceTree = "<group>"; };
-		F1FDDF4320F3AAB500D26CAB /* Disk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Disk.h; sourceTree = "<group>"; };
 		F1FDDF4420F3AAB600D26CAB /* Disk+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Disk+Data.swift"; sourceTree = "<group>"; };
 		F1FDDF4520F3AAB600D26CAB /* Disk+VolumeInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Disk+VolumeInformation.swift"; sourceTree = "<group>"; };
-		F1FDDF4620F3AAB600D26CAB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1FDDF4720F3AAB600D26CAB /* Disk+[UIImage].swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Disk+[UIImage].swift"; sourceTree = "<group>"; };
 		F1FDDF4820F3AAB600D26CAB /* Disk+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Disk+Helpers.swift"; sourceTree = "<group>"; };
 		F1FDDF4920F3AAB600D26CAB /* Disk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disk.swift; sourceTree = "<group>"; };
@@ -123,7 +130,6 @@
 		E8067D971EFE8DDB0062D043 = {
 			isa = PBXGroup;
 			children = (
-				F1FDDF4220F3AA9300D26CAB /* Disk */,
 				E8067DA21EFE8DDB0062D043 /* ListsSiriKit */,
 				E8067DBA1EFE8EA30062D043 /* Siri */,
 				E8067DC61EFE8EA40062D043 /* SiriUI */,
@@ -145,6 +151,7 @@
 		E8067DA21EFE8DDB0062D043 /* ListsSiriKit */ = {
 			isa = PBXGroup;
 			children = (
+				F1FDDF5A20F3ADE600D26CAB /* Disk */,
 				E8067DDD1EFE9C100062D043 /* ListsSiriKit.entitlements */,
 				E8067DA31EFE8DDB0062D043 /* AppDelegate.swift */,
 				E8067DAA1EFE8DDB0062D043 /* Assets.xcassets */,
@@ -183,10 +190,9 @@
 			path = SiriUI;
 			sourceTree = "<group>";
 		};
-		F1FDDF4220F3AA9300D26CAB /* Disk */ = {
+		F1FDDF5A20F3ADE600D26CAB /* Disk */ = {
 			isa = PBXGroup;
 			children = (
-				F1FDDF4320F3AAB500D26CAB /* Disk.h */,
 				F1FDDF4920F3AAB600D26CAB /* Disk.swift */,
 				F1FDDF4A20F3AAB600D26CAB /* Disk+[Data].swift */,
 				F1FDDF4720F3AAB600D26CAB /* Disk+[UIImage].swift */,
@@ -197,7 +203,6 @@
 				F1FDDF4E20F3AAB600D26CAB /* Disk+InternalHelpers.swift */,
 				F1FDDF4C20F3AAB600D26CAB /* Disk+UIImage.swift */,
 				F1FDDF4520F3AAB600D26CAB /* Disk+VolumeInformation.swift */,
-				F1FDDF4620F3AAB600D26CAB /* Info.plist */,
 			);
 			path = Disk;
 			sourceTree = "<group>";
@@ -318,7 +323,6 @@
 			files = (
 				E8067DAE1EFE8DDB0062D043 /* LaunchScreen.storyboard in Resources */,
 				E8067DAB1EFE8DDB0062D043 /* Assets.xcassets in Resources */,
-				F1FDDF5120F3AAB600D26CAB /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,8 +367,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F8022820F3AF8000275418 /* Disk+[Data].swift in Sources */,
+				F1F8022E20F3AF8000275418 /* Disk+InternalHelpers.swift in Sources */,
+				F1F8022B20F3AF8000275418 /* Disk+Data.swift in Sources */,
+				F1F8022A20F3AF8000275418 /* Disk+Codable.swift in Sources */,
+				F1F8022720F3AF8000275418 /* Disk.swift in Sources */,
+				F1F8022D20F3AF8000275418 /* Disk+Helpers.swift in Sources */,
+				F1F8022920F3AF8000275418 /* Disk+[UIImage].swift in Sources */,
+				F1F8023020F3AF8000275418 /* Disk+VolumeInformation.swift in Sources */,
 				E8067DBC1EFE8EA30062D043 /* IntentHandler.swift in Sources */,
+				F1F8022F20F3AF8000275418 /* Disk+UIImage.swift in Sources */,
 				E8067DDC1EFE9B270062D043 /* NotesManager.swift in Sources */,
+				F1F8022C20F3AF8000275418 /* Disk+Errors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
