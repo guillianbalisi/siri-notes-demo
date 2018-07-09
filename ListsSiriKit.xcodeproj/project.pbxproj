@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E8067DA41EFE8DDB0062D043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8067DA31EFE8DDB0062D043 /* AppDelegate.swift */; };
-		E8067DA61EFE8DDB0062D043 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8067DA51EFE8DDB0062D043 /* ViewController.swift */; };
-		E8067DA91EFE8DDB0062D043 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8067DA71EFE8DDB0062D043 /* Main.storyboard */; };
 		E8067DAB1EFE8DDB0062D043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8067DAA1EFE8DDB0062D043 /* Assets.xcassets */; };
 		E8067DAE1EFE8DDB0062D043 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8067DAC1EFE8DDB0062D043 /* LaunchScreen.storyboard */; };
 		E8067DBC1EFE8EA30062D043 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8067DBB1EFE8EA30062D043 /* IntentHandler.swift */; };
@@ -20,8 +18,6 @@
 		E8067DD21EFE8EA40062D043 /* Siri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E8067DB91EFE8EA30062D043 /* Siri.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E8067DDB1EFE9B270062D043 /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8067DDA1EFE9B270062D043 /* NotesManager.swift */; };
 		E8067DDC1EFE9B270062D043 /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8067DDA1EFE9B270062D043 /* NotesManager.swift */; };
-		E8067DE01EFEB8C00062D043 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8067DDF1EFEB8C00062D043 /* TasksViewController.swift */; };
-		E84249111EFEBD1F007B697E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84249101EFEBD1F007B697E /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +55,6 @@
 /* Begin PBXFileReference section */
 		E8067DA01EFE8DDB0062D043 /* ListsSiriKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListsSiriKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8067DA31EFE8DDB0062D043 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E8067DA51EFE8DDB0062D043 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E8067DA81EFE8DDB0062D043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8067DAA1EFE8DDB0062D043 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8067DAD1EFE8DDB0062D043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8067DAF1EFE8DDB0062D043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,8 +69,6 @@
 		E8067DDA1EFE9B270062D043 /* NotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManager.swift; sourceTree = "<group>"; };
 		E8067DDD1EFE9C100062D043 /* ListsSiriKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ListsSiriKit.entitlements; sourceTree = "<group>"; };
 		E8067DDE1EFE9C210062D043 /* Siri.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Siri.entitlements; sourceTree = "<group>"; };
-		E8067DDF1EFEB8C00062D043 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
-		E84249101EFEBD1F007B697E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,14 +123,10 @@
 			children = (
 				E8067DDD1EFE9C100062D043 /* ListsSiriKit.entitlements */,
 				E8067DA31EFE8DDB0062D043 /* AppDelegate.swift */,
-				E8067DA51EFE8DDB0062D043 /* ViewController.swift */,
-				E8067DDF1EFEB8C00062D043 /* TasksViewController.swift */,
-				E8067DA71EFE8DDB0062D043 /* Main.storyboard */,
 				E8067DAA1EFE8DDB0062D043 /* Assets.xcassets */,
 				E8067DAC1EFE8DDB0062D043 /* LaunchScreen.storyboard */,
 				E8067DAF1EFE8DDB0062D043 /* Info.plist */,
 				E8067DDA1EFE9B270062D043 /* NotesManager.swift */,
-				E84249101EFEBD1F007B697E /* Utils.swift */,
 			);
 			path = ListsSiriKit;
 			sourceTree = "<group>";
@@ -287,7 +275,6 @@
 			files = (
 				E8067DAE1EFE8DDB0062D043 /* LaunchScreen.storyboard in Resources */,
 				E8067DAB1EFE8DDB0062D043 /* Assets.xcassets in Resources */,
-				E8067DA91EFE8DDB0062D043 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,9 +300,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E84249111EFEBD1F007B697E /* Utils.swift in Sources */,
-				E8067DA61EFE8DDB0062D043 /* ViewController.swift in Sources */,
-				E8067DE01EFEB8C00062D043 /* TasksViewController.swift in Sources */,
 				E8067DDB1EFE9B270062D043 /* NotesManager.swift in Sources */,
 				E8067DA41EFE8DDB0062D043 /* AppDelegate.swift in Sources */,
 			);
@@ -354,14 +338,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E8067DA71EFE8DDB0062D043 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E8067DA81EFE8DDB0062D043 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E8067DAC1EFE8DDB0062D043 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
