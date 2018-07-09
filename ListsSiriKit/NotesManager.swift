@@ -8,6 +8,22 @@
 
 import Foundation
 
+struct Note: Codable {
+    let title: String
+    let date: String
+    
+    static let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, h:mm a"
+        return formatter
+    }()
+    
+    init(title: String, date: Date) {
+        self.title = title
+        self.date = Note.dateFormatter.string(from: date)
+    }
+}
+
 class NotesManager {
     private var savedNotes: [String] = []
     static let NotesKey = "notes"
