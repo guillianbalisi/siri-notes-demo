@@ -20,4 +20,13 @@ extension UIFont {
     static func helvetica(ofSize size: CGFloat, weight: HelveticaNeueWeight = .regular) -> UIFont {
         return UIFont(name: "HelveticaNeue" + weight.rawValue, size: size)!
     }
+    
+    enum GeorgiaWeight: String {
+        case regular = ""
+        case bold = "-Bold"
+    }
+    
+    static func georgia(ofSize size: CGFloat, weight: GeorgiaWeight = .regular) -> UIFont {
+        return UIFont(name: "Georgia" + weight.rawValue, size: size)!
+    }
 }

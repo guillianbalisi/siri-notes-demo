@@ -13,17 +13,31 @@ class DiaryDataSourceDelegate: NSObject {
     var notes: [Note] {
         return NotesManager.shared.notes
     }
+    
+    let fakeNotes = [Note(title: "Feeling good", isManualEntry: true),
+                     Note(title: "Medium tremors", isManualEntry: false),
+                     Note(title: "Muscle stiffness", isManualEntry: true),
+                     Note(title: "Insomnia during the night", isManualEntry: true),
+                     Note(title: "Dizziness while sitting", isManualEntry: false),
+                     Note(title: "Light tremors", isManualEntry: false),
+                     Note(title: "Lost balance", isManualEntry: true),
+                     Note(title: "Light tremors", isManualEntry: false)]
 }
 
 extension DiaryDataSourceDelegate: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return fakeNotes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "DiaryCell") as? DiaryCell
             else { return UITableViewCell() }
-        cell.setCell(isFirstCell: indexPath.row == 0, isLastCell: indexPath.row == 9)
+        
+        let note = fakeNotes[indexPath.row]
+        
+        cell.setCell(isFirstCell: indexPath.row == 0,
+                     isLastCell: indexPath.row == fakeNotes.endIndex-1,
+                     note: note)
         return cell
     }
 }

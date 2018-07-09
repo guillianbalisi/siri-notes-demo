@@ -10,6 +10,7 @@ import Foundation
 
 struct Note: Codable {
     let title: String
+    let isManualEntry: Bool
     let date: String
     
     static let dateFormatter: DateFormatter = {
@@ -18,8 +19,9 @@ struct Note: Codable {
         return formatter
     }()
     
-    init(title: String) {
+    init(title: String, isManualEntry: Bool) {
         self.title = title
+        self.isManualEntry = isManualEntry
         self.date = Note.dateFormatter.string(from: Date())
     }
 }
@@ -44,8 +46,8 @@ class NotesManager {
         }
     }
 
-    func createNote(title: String) {
-        let newNote = Note(title: title)
+    func createNote(title: String, isManualEntry: Bool) {
+        let newNote = Note(title: title, isManualEntry: isManualEntry)
         savedNotes.append(newNote)
         try? Disk.append(newNote, to: NotesManager.NotesKey, in: sharedContainer)
     }

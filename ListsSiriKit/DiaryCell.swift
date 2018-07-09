@@ -27,6 +27,32 @@ class DiaryCell: UITableViewCell {
         return line
     }()
     
+    private lazy var timeLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        label.textColor = UIColor.primaryRed
+        return label
+    }()
+    
+    private lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 1
+        label.adjustsFontSizeToFitWidth = true
+        label.font = UIFont.georgia(ofSize: 23)
+        label.textColor = UIColor.black
+        return label
+    }()
+    
+    private lazy var detailLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 15, weight: .light)
+        label.textColor = UIColor.lightGray
+        return label
+    }()
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
@@ -39,9 +65,12 @@ class DiaryCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setCell(isFirstCell: Bool, isLastCell: Bool) {
+    func setCell(isFirstCell: Bool, isLastCell: Bool, note: Note) {
         topLine.isHidden = isFirstCell
         bottomLine.isHidden = isLastCell
+        timeLabel.text = note.date
+        titleLabel.text = note.title
+        detailLabel.text = "Home - \(note.isManualEntry ? "Manual Entry" : "Siri")"
     }
     
     private func setupSubviews() {
@@ -49,7 +78,29 @@ class DiaryCell: UITableViewCell {
         contentView.addSubview(view)
         view.pinToSuperviewEdges(leading: 80, trailing: 14, top: 16, bottom: 16)
         
+        view.addSubview(timeLabel)
+        NSLayoutConstraint.activate([
+            timeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
+            timeLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
+            timeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 4),
+            timeLabel.heightAnchor.constraint(equalToConstant: 34)
+            ])
         
+        view.addSubview(titleLabel)
+        NSLayoutConstraint.activate([
+            titleLabel.leadingAnchor.constraint(equalTo: timeLabel.leadingAnchor),
+            titleLabel.trailingAnchor.constraint(equalTo: timeLabel.trailingAnchor),
+            titleLabel.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 0),
+            titleLabel.heightAnchor.constraint(equalToConstant: 38)
+            ])
+        
+        view.addSubview(detailLabel)
+        NSLayoutConstraint.activate([
+            detailLabel.leadingAnchor.constraint(equalTo: timeLabel.leadingAnchor),
+            detailLabel.trailingAnchor.constraint(equalTo: timeLabel.trailingAnchor),
+            detailLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
+            detailLabel.heightAnchor.constraint(equalToConstant: 20)
+            ])
         
         let sideView = createSideView()
         contentView.addSubview(sideView)
