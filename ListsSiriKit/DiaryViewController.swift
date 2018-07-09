@@ -67,10 +67,6 @@ extension DiaryViewController {
         
         bar.largeTitleTextAttributes = [NSAttributedStringKey.font: UIFont.georgia(ofSize: 36, weight: .bold)]
         bar.titleTextAttributes = [NSAttributedStringKey.font: UIFont.georgia(ofSize: 18, weight: .bold)]
-//        bar.layer.shadowOffset = CGSize(width: 0, height: 2)
-//        bar.layer.shadowRadius = 16
-//        bar.layer.shadowColor = UIColor.darkGray.cgColor
-//        bar.layer.shadowOpacity = 0.15
     }
     
     private func setupSubviews() {
