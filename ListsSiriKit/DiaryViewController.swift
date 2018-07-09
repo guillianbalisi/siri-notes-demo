@@ -30,7 +30,7 @@ class DiaryViewController: UIViewController {
         bar.layer.shadowOffset = CGSize(width: 0, height: 2)
         bar.layer.shadowRadius = 16
         bar.layer.shadowColor = UIColor.darkGray.cgColor
-        bar.layer.shadowOpacity = 0.2
+        bar.layer.shadowOpacity = 0.15
     }
     
     @objc func addButtonTapped() {
