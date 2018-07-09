@@ -36,13 +36,16 @@ class IntentHandler: INExtension {
 
 extension IntentHandler: INCreateNoteIntentHandling {
     func handle(intent: INCreateNoteIntent, completion: @escaping (INCreateNoteIntentResponse) -> Void) {
-        let response: INCreateNoteIntentResponse
         
-        if let title = intent.title, !title.spokenPhrase.isEmpty {
-            response = INCreateNoteIntentResponse(code: .success, userActivity: nil)
-        } else {
-            response = INCreateNoteIntentResponse(code: .failureRequiringAppLaunch, userActivity: nil)
+        guard let title = intent.title, !title.spokenPhrase.isEmpty else {
+            completion(INCreateNoteIntentResponse(code: .failure, userActivity: nil))
+            return
         }
+        
+        NotesManager.shared.createNote(title.spokenPhrase)
+        
+        let response = INCreateNoteIntentResponse(code: .success, userActivity: nil)
+        response.createdNote = INNote(title: title, contents: [], groupName: nil, createdDateComponents: nil, modifiedDateComponents: nil, identifier: nil)
         
         completion(response)
     }
