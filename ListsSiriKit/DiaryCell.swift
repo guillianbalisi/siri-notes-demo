@@ -146,7 +146,7 @@ class DiaryCell: UITableViewCell {
         
         let circle = UIView()
         circle.layer.cornerRadius = 11
-        circle.backgroundColor = self.sideColor
+        circle.backgroundColor = sideColor
         circle.translatesAutoresizingMaskIntoConstraints = false
         
         let innerCircle = UIView()
