@@ -9,11 +9,17 @@
 import Foundation
 import UIKit
 
+protocol DiaryHeaderViewDelegate: class {
+    func didSelectMonth(_ month: Int)
+}
+
 class DiaryHeaderView: UIView {
     
     private let months = DateFormatter().shortMonthSymbols!
     
     var selectedMonth: Int
+    
+    weak var delegate: DiaryHeaderViewDelegate?
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -70,5 +76,9 @@ extension DiaryHeaderView: UICollectionViewDataSource {
 }
 
 extension DiaryHeaderView: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedMonth = indexPath.row
+        collectionView.reloadData()
+        delegate?.didSelectMonth(selectedMonth)
+    }
 }
