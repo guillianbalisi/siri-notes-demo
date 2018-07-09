@@ -49,7 +49,7 @@ class DiaryCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 15, weight: .light)
-        label.textColor = UIColor.lightGray
+        label.textColor = UIColor.gray
         return label
     }()
     
