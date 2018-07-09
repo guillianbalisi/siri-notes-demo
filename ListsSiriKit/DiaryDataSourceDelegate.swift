@@ -23,7 +23,7 @@ extension DiaryDataSourceDelegate: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "DiaryCell") as? DiaryCell
             else { return UITableViewCell() }
-        
+        cell.setCell(isFirstCell: indexPath.row == 0, isLastCell: indexPath.row == 9)
         return cell
     }
 }

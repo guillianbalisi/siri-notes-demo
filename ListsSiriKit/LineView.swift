@@ -25,6 +25,7 @@ class LineView: UIView {
             heightAnchor.constraint(equalToConstant: size).isActive = true
         }
         backgroundColor = color
+        layer.cornerRadius = 2
     }
     
     required init?(coder aDecoder: NSCoder) {
