@@ -13,18 +13,19 @@ class DiaryCell: UITableViewCell {
     
     static let height: CGFloat = 140
     
-    private let topLine: LineView = {
-        let line = LineView(.vertical, color: UIColor.primaryRed, size: 3)
+    private let sideColor = UIColor.gray
+    
+    private lazy var topLine: LineView = {
+        let line = LineView(.vertical, color: self.sideColor, size: 3)
         line.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         return line
     }()
     
-    private let bottomLine: LineView = {
-        let line = LineView(.vertical, color: UIColor.primaryRed, size: 3)
+    private lazy var bottomLine: LineView = {
+        let line = LineView(.vertical, color: self.sideColor, size: 3)
         line.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         return line
     }()
-    
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -47,6 +48,8 @@ class DiaryCell: UITableViewCell {
         let view = createMainView()
         contentView.addSubview(view)
         view.pinToSuperviewEdges(leading: 80, trailing: 14, top: 16, bottom: 16)
+        
+        
         
         let sideView = createSideView()
         contentView.addSubview(sideView)
@@ -80,7 +83,7 @@ class DiaryCell: UITableViewCell {
         
         let circle = UIView()
         circle.layer.cornerRadius = 11
-        circle.backgroundColor = UIColor.primaryRed
+        circle.backgroundColor = self.sideColor
         circle.translatesAutoresizingMaskIntoConstraints = false
         
         let innerCircle = UIView()
