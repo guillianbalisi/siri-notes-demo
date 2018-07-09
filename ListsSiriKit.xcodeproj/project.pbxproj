@@ -28,6 +28,9 @@
 		F1F8022E20F3AF8000275418 /* Disk+InternalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4E20F3AAB600D26CAB /* Disk+InternalHelpers.swift */; };
 		F1F8022F20F3AF8000275418 /* Disk+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4C20F3AAB600D26CAB /* Disk+UIImage.swift */; };
 		F1F8023020F3AF8000275418 /* Disk+VolumeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4520F3AAB600D26CAB /* Disk+VolumeInformation.swift */; };
+		F1F8023220F3B77D00275418 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F8023120F3B77D00275418 /* UIColor+Extensions.swift */; };
+		F1F8023420F3B7DD00275418 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F8023320F3B7DD00275418 /* TabBarController.swift */; };
+		F1F8023620F3C03800275418 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F8023520F3C03800275418 /* DiaryViewController.swift */; };
 		F1FDDF4F20F3AAB600D26CAB /* Disk+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4420F3AAB600D26CAB /* Disk+Data.swift */; };
 		F1FDDF5020F3AAB600D26CAB /* Disk+VolumeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4520F3AAB600D26CAB /* Disk+VolumeInformation.swift */; };
 		F1FDDF5220F3AAB600D26CAB /* Disk+[UIImage].swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4720F3AAB600D26CAB /* Disk+[UIImage].swift */; };
@@ -89,6 +92,9 @@
 		E8067DDA1EFE9B270062D043 /* NotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManager.swift; sourceTree = "<group>"; };
 		E8067DDD1EFE9C100062D043 /* ListsSiriKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ListsSiriKit.entitlements; sourceTree = "<group>"; };
 		E8067DDE1EFE9C210062D043 /* Siri.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Siri.entitlements; sourceTree = "<group>"; };
+		F1F8023120F3B77D00275418 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		F1F8023320F3B7DD00275418 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F1F8023520F3C03800275418 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		F1FDDF4420F3AAB600D26CAB /* Disk+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Disk+Data.swift"; sourceTree = "<group>"; };
 		F1FDDF4520F3AAB600D26CAB /* Disk+VolumeInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Disk+VolumeInformation.swift"; sourceTree = "<group>"; };
 		F1FDDF4720F3AAB600D26CAB /* Disk+[UIImage].swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Disk+[UIImage].swift"; sourceTree = "<group>"; };
@@ -154,10 +160,13 @@
 				F1FDDF5A20F3ADE600D26CAB /* Disk */,
 				E8067DDD1EFE9C100062D043 /* ListsSiriKit.entitlements */,
 				E8067DA31EFE8DDB0062D043 /* AppDelegate.swift */,
+				F1F8023520F3C03800275418 /* DiaryViewController.swift */,
 				E8067DAA1EFE8DDB0062D043 /* Assets.xcassets */,
 				E8067DAC1EFE8DDB0062D043 /* LaunchScreen.storyboard */,
 				E8067DAF1EFE8DDB0062D043 /* Info.plist */,
 				E8067DDA1EFE9B270062D043 /* NotesManager.swift */,
+				F1F8023120F3B77D00275418 /* UIColor+Extensions.swift */,
+				F1F8023320F3B7DD00275418 /* TabBarController.swift */,
 			);
 			path = ListsSiriKit;
 			sourceTree = "<group>";
@@ -349,8 +358,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1FDDF5720F3AAB600D26CAB /* Disk+UIImage.swift in Sources */,
+				F1F8023620F3C03800275418 /* DiaryViewController.swift in Sources */,
 				F1FDDF5420F3AAB600D26CAB /* Disk.swift in Sources */,
 				E8067DDB1EFE9B270062D043 /* NotesManager.swift in Sources */,
+				F1F8023220F3B77D00275418 /* UIColor+Extensions.swift in Sources */,
 				F1FDDF5820F3AAB600D26CAB /* Disk+Codable.swift in Sources */,
 				E8067DA41EFE8DDB0062D043 /* AppDelegate.swift in Sources */,
 				F1FDDF5220F3AAB600D26CAB /* Disk+[UIImage].swift in Sources */,
@@ -358,6 +369,7 @@
 				F1FDDF5920F3AAB600D26CAB /* Disk+InternalHelpers.swift in Sources */,
 				F1FDDF4F20F3AAB600D26CAB /* Disk+Data.swift in Sources */,
 				F1FDDF5320F3AAB600D26CAB /* Disk+Helpers.swift in Sources */,
+				F1F8023420F3B7DD00275418 /* TabBarController.swift in Sources */,
 				F1FDDF5620F3AAB600D26CAB /* Disk+Errors.swift in Sources */,
 				F1FDDF5020F3AAB600D26CAB /* Disk+VolumeInformation.swift in Sources */,
 			);
