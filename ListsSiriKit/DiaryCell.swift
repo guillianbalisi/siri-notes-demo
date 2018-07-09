@@ -78,6 +78,18 @@ class DiaryCell: UITableViewCell {
         contentView.addSubview(view)
         view.pinToSuperviewEdges(leading: 80, trailing: 14, top: 16, bottom: 16)
         
+        let moreImageView = UIImageView(image: #imageLiteral(resourceName: "more").withRenderingMode(.alwaysTemplate))
+        moreImageView.contentMode = .scaleAspectFit
+        moreImageView.translatesAutoresizingMaskIntoConstraints = false
+        moreImageView.tintColor = UIColor.black
+        
+        view.addSubview(moreImageView)
+        NSLayoutConstraint.activate([
+            moreImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            moreImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 4),
+            moreImageView.widthAnchor.constraint(equalToConstant: 24)
+            ])
+        
         view.addSubview(timeLabel)
         NSLayoutConstraint.activate([
             timeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
