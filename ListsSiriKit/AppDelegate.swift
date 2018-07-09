@@ -14,8 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        UIApplication.shared.statusBarStyle = .lightContent
-
         print(NotesManager.shared.notes)
         
         setupWindow()
@@ -30,7 +28,7 @@ extension AppDelegate {
         
         let tabBarController = TabBarController()
         let one = createTabViewController(image: #imageLiteral(resourceName: "home"), tag: 0, rootVC: UIViewController())
-        let two = createTabViewController(image: #imageLiteral(resourceName: "diary"), tag: 1, rootVC: UIViewController())
+        let two = createTabViewController(image: #imageLiteral(resourceName: "diary"), tag: 1, rootVC: DiaryViewController())
         let three = createTabViewController(image: #imageLiteral(resourceName: "stethoscope"), tag: 2, rootVC: UIViewController())
         let four = createTabViewController(image: #imageLiteral(resourceName: "person"), tag: 3, rootVC: UIViewController())
         tabBarController.viewControllers = [one, two, three, four]

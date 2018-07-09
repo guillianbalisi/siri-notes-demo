@@ -31,6 +31,7 @@
 		F1F8023220F3B77D00275418 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F8023120F3B77D00275418 /* UIColor+Extensions.swift */; };
 		F1F8023420F3B7DD00275418 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F8023320F3B7DD00275418 /* TabBarController.swift */; };
 		F1F8023620F3C03800275418 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F8023520F3C03800275418 /* DiaryViewController.swift */; };
+		F1F8023820F3C23400275418 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F8023720F3C23400275418 /* UIFont+Extensions.swift */; };
 		F1FDDF4F20F3AAB600D26CAB /* Disk+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4420F3AAB600D26CAB /* Disk+Data.swift */; };
 		F1FDDF5020F3AAB600D26CAB /* Disk+VolumeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4520F3AAB600D26CAB /* Disk+VolumeInformation.swift */; };
 		F1FDDF5220F3AAB600D26CAB /* Disk+[UIImage].swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4720F3AAB600D26CAB /* Disk+[UIImage].swift */; };
@@ -95,6 +96,7 @@
 		F1F8023120F3B77D00275418 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		F1F8023320F3B7DD00275418 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F1F8023520F3C03800275418 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
+		F1F8023720F3C23400275418 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		F1FDDF4420F3AAB600D26CAB /* Disk+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Disk+Data.swift"; sourceTree = "<group>"; };
 		F1FDDF4520F3AAB600D26CAB /* Disk+VolumeInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Disk+VolumeInformation.swift"; sourceTree = "<group>"; };
 		F1FDDF4720F3AAB600D26CAB /* Disk+[UIImage].swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Disk+[UIImage].swift"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				E8067DDA1EFE9B270062D043 /* NotesManager.swift */,
 				F1F8023120F3B77D00275418 /* UIColor+Extensions.swift */,
 				F1F8023320F3B7DD00275418 /* TabBarController.swift */,
+				F1F8023720F3C23400275418 /* UIFont+Extensions.swift */,
 			);
 			path = ListsSiriKit;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			files = (
 				F1FDDF5720F3AAB600D26CAB /* Disk+UIImage.swift in Sources */,
 				F1F8023620F3C03800275418 /* DiaryViewController.swift in Sources */,
+				F1F8023820F3C23400275418 /* UIFont+Extensions.swift in Sources */,
 				F1FDDF5420F3AAB600D26CAB /* Disk.swift in Sources */,
 				E8067DDB1EFE9B270062D043 /* NotesManager.swift in Sources */,
 				F1F8023220F3B77D00275418 /* UIColor+Extensions.swift in Sources */,
