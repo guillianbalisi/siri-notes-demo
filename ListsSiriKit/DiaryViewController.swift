@@ -21,7 +21,13 @@ class DiaryViewController: UIViewController {
         table.dataSource = dataSourceDelegate
         table.delegate = dataSourceDelegate
         table.tableFooterView = UIView()
+        table.tableHeaderView = headerView
         return table
+    }()
+    
+    private lazy var headerView: DiaryHeaderView = {
+        let view = DiaryHeaderView(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: 50))
+        return view
     }()
     
     // MARK: - Life cycle
