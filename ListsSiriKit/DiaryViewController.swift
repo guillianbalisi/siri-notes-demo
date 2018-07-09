@@ -28,21 +28,12 @@ class DiaryViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         setupSubviews()
-        registerForNotifications()
-    }
-    
-    private func registerForNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(handleAppOpen), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
     
     // MARK: - Actions
     
     @objc func addButtonTapped() {
         
-    }
-    
-    @objc func handleAppOpen() {
-        table.reloadData()
     }
 }
 
