@@ -17,6 +17,7 @@ class DiaryViewController: UIViewController {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
         table.register(DiaryCell.self, forCellReuseIdentifier: "DiaryCell")
+        table.register(NoEntriesCell.self, forCellReuseIdentifier: "NoEntriesCell")
         table.separatorStyle = .none
         table.dataSource = dataSourceDelegate
         table.delegate = dataSourceDelegate
@@ -27,6 +28,7 @@ class DiaryViewController: UIViewController {
     
     private lazy var headerView: DiaryHeaderView = {
         let view = DiaryHeaderView(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: 50))
+        view.delegate = self
         return view
     }()
     
@@ -79,5 +81,12 @@ extension DiaryViewController {
             table.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             table.bottomAnchor.constraint(equalTo: view.bottomAnchor)
             ])
+    }
+}
+
+extension DiaryViewController: DiaryHeaderViewDelegate {
+    func didSelectMonth(_ month: Int) {
+        dataSourceDelegate.month = month
+        table.reloadData()
     }
 }

@@ -18,6 +18,7 @@
 		E8067DD21EFE8EA40062D043 /* Siri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E8067DB91EFE8EA30062D043 /* Siri.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E8067DDB1EFE9B270062D043 /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8067DDA1EFE9B270062D043 /* NotesManager.swift */; };
 		E8067DDC1EFE9B270062D043 /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8067DDA1EFE9B270062D043 /* NotesManager.swift */; };
+		F1E90B4F20F3FDC4000F57DD /* NoEntriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E90B4E20F3FDC4000F57DD /* NoEntriesCell.swift */; };
 		F1F8022720F3AF8000275418 /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4920F3AAB600D26CAB /* Disk.swift */; };
 		F1F8022820F3AF8000275418 /* Disk+[Data].swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4A20F3AAB600D26CAB /* Disk+[Data].swift */; };
 		F1F8022920F3AF8000275418 /* Disk+[UIImage].swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDDF4720F3AAB600D26CAB /* Disk+[UIImage].swift */; };
@@ -100,6 +101,7 @@
 		E8067DDA1EFE9B270062D043 /* NotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManager.swift; sourceTree = "<group>"; };
 		E8067DDD1EFE9C100062D043 /* ListsSiriKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ListsSiriKit.entitlements; sourceTree = "<group>"; };
 		E8067DDE1EFE9C210062D043 /* Siri.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Siri.entitlements; sourceTree = "<group>"; };
+		F1E90B4E20F3FDC4000F57DD /* NoEntriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoEntriesCell.swift; sourceTree = "<group>"; };
 		F1F8023120F3B77D00275418 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		F1F8023320F3B7DD00275418 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F1F8023520F3C03800275418 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				F1F8024120F3D63700275418 /* UIView+Extensions.swift */,
 				F1F8024320F3F2A000275418 /* DiaryHeaderView.swift */,
 				F1F8024520F3F48B00275418 /* DiaryHeaderCell.swift */,
+				F1E90B4E20F3FDC4000F57DD /* NoEntriesCell.swift */,
 			);
 			path = ListsSiriKit;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				E8067DA41EFE8DDB0062D043 /* AppDelegate.swift in Sources */,
 				F1FDDF5220F3AAB600D26CAB /* Disk+[UIImage].swift in Sources */,
 				F1FDDF5520F3AAB600D26CAB /* Disk+[Data].swift in Sources */,
+				F1E90B4F20F3FDC4000F57DD /* NoEntriesCell.swift in Sources */,
 				F1FDDF5920F3AAB600D26CAB /* Disk+InternalHelpers.swift in Sources */,
 				F1FDDF4F20F3AAB600D26CAB /* Disk+Data.swift in Sources */,
 				F1FDDF5320F3AAB600D26CAB /* Disk+Helpers.swift in Sources */,

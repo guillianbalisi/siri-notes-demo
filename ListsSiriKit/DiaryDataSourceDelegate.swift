@@ -22,21 +22,30 @@ class DiaryDataSourceDelegate: NSObject {
                      Note(title: "Light tremors", isManualEntry: false),
                      Note(title: "Lost balance", isManualEntry: true),
                      Note(title: "Light tremors", isManualEntry: false)]
+    
+    var month = Calendar.current.component(.month, from: Date())-1
 }
 
 extension DiaryDataSourceDelegate: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fakeNotes.count
+        return notes.isEmpty ? 1 : notes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if notes.isEmpty {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "NoEntriesCell")
+                as? NoEntriesCell else { fatalError() }
+            cell.setText(month: month)
+            return cell
+        }
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "DiaryCell") as? DiaryCell
             else { return UITableViewCell() }
         
-        let note = fakeNotes[indexPath.row]
+        let note = notes[indexPath.row]
         
         cell.setCell(isFirstCell: indexPath.row == 0,
-                     isLastCell: indexPath.row == fakeNotes.endIndex-1,
+                     isLastCell: indexPath.row == notes.endIndex-1,
                      note: note)
         return cell
     }
