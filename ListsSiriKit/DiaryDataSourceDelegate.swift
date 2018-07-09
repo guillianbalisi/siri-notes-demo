@@ -17,17 +17,19 @@ class DiaryDataSourceDelegate: NSObject {
 
 extension DiaryDataSourceDelegate: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notes.count
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = notes[indexPath.row].title
-        cell.detailTextLabel?.text = notes[indexPath.row].date
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DiaryCell") as? DiaryCell
+            else { return UITableViewCell() }
+        
         return cell
     }
 }
 
 extension DiaryDataSourceDelegate: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return DiaryCell.height
+    }
 }

@@ -16,6 +16,8 @@ class DiaryViewController: UIViewController {
     private lazy var table: UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
+        table.register(DiaryCell.self, forCellReuseIdentifier: "DiaryCell")
+        table.separatorStyle = .none
         table.dataSource = dataSourceDelegate
         table.delegate = dataSourceDelegate
         table.tableFooterView = UIView()
@@ -55,10 +57,10 @@ extension DiaryViewController {
         bar.isTranslucent = false
         bar.setValue(true, forKey: "hidesShadow")
         
-        bar.layer.shadowOffset = CGSize(width: 0, height: 2)
-        bar.layer.shadowRadius = 16
-        bar.layer.shadowColor = UIColor.darkGray.cgColor
-        bar.layer.shadowOpacity = 0.15
+//        bar.layer.shadowOffset = CGSize(width: 0, height: 2)
+//        bar.layer.shadowRadius = 16
+//        bar.layer.shadowColor = UIColor.darkGray.cgColor
+//        bar.layer.shadowOpacity = 0.15
     }
     
     private func setupSubviews() {
