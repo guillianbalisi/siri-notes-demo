@@ -34,6 +34,10 @@ extension AppDelegate {
         tabBarController.viewControllers = [one, two, three, four]
         tabBarController.selectedIndex = 1
         
+        let firstItem = tabBarController.tabBar.items?.first
+        firstItem!.badgeValue = "2"
+        firstItem?.badgeColor = UIColor.primaryRed
+        
         window?.rootViewController = tabBarController
         window?.backgroundColor = UIColor.white
         window?.makeKeyAndVisible()
